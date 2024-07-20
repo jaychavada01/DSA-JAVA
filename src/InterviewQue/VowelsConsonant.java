@@ -1,7 +1,12 @@
-public class VowelsConstant {
+import java.util.Scanner;
+
+public class VowelsConsonant {
     public static void main(String[] args) {
-        // Input string
-        String str = "Hello, World!";
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter string: ");
+
+        String str = sc.nextLine();
 
         // Convert to lowercase for case-insensitive check
         str = str.toLowerCase();
@@ -18,5 +23,6 @@ public class VowelsConstant {
                 }
             }
         }
+        sc.close();
     }
 }

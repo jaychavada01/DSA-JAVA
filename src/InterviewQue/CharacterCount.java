@@ -1,7 +1,14 @@
+import java.util.Scanner;
+
 public class CharacterCount {
     public static void main(String[] args) {
-        String str = "eSparkBiz";
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter string: ");
+
+        String str = sc.nextLine();
         countCharOccurrences(str);
+        sc.close();
     }
 
     public static void countCharOccurrences(String str) {
