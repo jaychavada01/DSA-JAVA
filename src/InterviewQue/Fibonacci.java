@@ -7,7 +7,7 @@ public class Fibonacci {
         // Prompt user for input
         System.out.print("Enter the number of terms for the Fibonacci sequence: ");
         int n = scanner.nextInt();
-
+        
         // Print the Fibonacci sequence
         System.out.println("Fibonacci Series:");
         for (int i = 0; i < n; i++) {
@@ -19,7 +19,7 @@ public class Fibonacci {
 
     public static int fibonacci(int n) {
         if (n <= 1) {
-            return n;
+            return 0;
         } else {
             return fibonacci(n - 1) + fibonacci(n - 2);
         }
