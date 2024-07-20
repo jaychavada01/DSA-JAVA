@@ -7,5 +7,7 @@ public class SecondLargest {
         Arrays.sort(arr);
         
         System.out.println("Second largest element from array: "+arr[arr.length-2]);
+        System.out.println("Third largest element from array: "+arr[arr.length-3]);
+        System.out.println("Fourth largest element from array: "+arr[arr.length-4]);
     }
 }
