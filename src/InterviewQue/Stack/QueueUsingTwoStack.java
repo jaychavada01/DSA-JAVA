@@ -4,13 +4,8 @@ import java.util.Stack;
 
 public class QueueUsingTwoStack {
 
-    private Stack<Integer> stack1;
-    private Stack<Integer> stack2;
-
-    public QueueUsingTwoStack(){
-        stack1 = new Stack<>();
-        stack2 = new Stack<>();
-    }
+    private Stack<Integer> stack1 = new Stack<>();
+    private Stack<Integer> stack2 = new Stack<>();
 
     public void insert(int item){
         stack1.push(item);
@@ -66,8 +61,15 @@ public class QueueUsingTwoStack {
         queue.insert(4);
         queue.insert(5);
 
-        System.out.println(queue.remove());
-        System.out.println(queue.remove());
+        System.out.print("Queue: ");
+        queue.printQueue();
+
+        System.out.println();
+        
+        System.out.println("Removed : "+queue.remove());
+        System.out.println("Removed : "+queue.remove());
+
+        System.out.print("Queue: ");
         queue.printQueue();
     }
 }

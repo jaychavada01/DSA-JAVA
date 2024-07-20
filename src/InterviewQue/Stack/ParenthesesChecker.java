@@ -12,7 +12,7 @@ import java.util.Stack;
 
 public class ParenthesesChecker {
     public static void main(String[] args) {
-        String str = "{()}[]";
+        String str = "{((}))[]";
 
         Stack<Character> stackChar = new Stack<>();
 
