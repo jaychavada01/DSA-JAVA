@@ -48,7 +48,7 @@ public class PalindromeChecker {
         while (num > 0) {
             int lastDigit = num % 10;
             reversedNum = reversedNum * 10 + lastDigit;
-            num /= 10;
+            num = num/10;
         }
 
         return originalNum == reversedNum;
