@@ -15,7 +15,7 @@ public class Stack {
     }
 
     public boolean push(int item) {
-
+        
         if (isFull()) {
             System.out.println("Stack is full!!");
             return false;

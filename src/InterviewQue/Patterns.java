@@ -61,6 +61,12 @@ public class Patterns {
 
         System.out.println("Pattern 18:");
         pattern18(n);
+
+        System.out.println("Pattern 19:");
+        pattern19(n);
+        
+        System.out.println("Pattern 20:");
+        pattern20(n);
     }
 
     static void pattern1(int n) {
@@ -302,6 +308,31 @@ public class Patterns {
             }
             for (int j = 1; j < i * 2; j++) {
                 System.out.print(j + "");
+            }
+            System.out.println();
+        }
+    }
+
+    static void pattern19(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if ((i * j) < 10) {
+                    System.out.print("0");
+                }
+                System.out.print((i * j) + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    // reverse pyramid
+    static void pattern20(int n) {
+        for (int i = n; i >= 1; i--) {
+            for (int space = i; space < n; space++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
             }
             System.out.println();
         }
