@@ -61,6 +61,31 @@ public class NthNodeOperation {
         prevNode.next = prevNode.next.next;
     }
 
+    public int findNthFromLast(int N)
+    {
+        int length = 0;
+        Node temp = head;
+
+        // 1) count the number of nodes in Linked List
+        while (temp != null) {
+            temp = temp.next;
+            length++;
+        }
+
+        // check if value of N is not more than length of
+        // the linked list
+        if (length < N) {
+            return -1;
+        }
+        temp = head;
+
+        // 2) get the (length-N+1)th node from the beginning
+        for (int i = 1; i < length - N + 1; i++)
+            temp = temp.next;
+
+        return temp.value;
+    }
+
     public static void main(String[] args) {
         NthNodeOperation list = new NthNodeOperation();
 
@@ -77,5 +102,7 @@ public class NthNodeOperation {
         System.out.println("Linked list After deletion of nth last node:");
         list.removeNthFromEnd(list.head, 4);
         list.display();
+
+        System.out.println("Linked list node at nth index: "+ list.findNthFromLast(4));
     }
 }
