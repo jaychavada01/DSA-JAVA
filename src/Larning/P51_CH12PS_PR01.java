@@ -1,11 +1,11 @@
 // package calc;
 
-class Calculator{
+class Calculator1{
     public void calculate(int a, int b){
         System.out.println("Your result is:"+ a+b);
     }
 }
-class ScCalculator{
+class ScCalculator1{
     public void calculate(int a, int b){
         System.out.println("Your result is:"+ sin(a+b));
     }
@@ -14,7 +14,7 @@ class ScCalculator{
         return null;
     }
 }
-class HyCalculator{
+class HyCalculator1{
     public void calculate(int a, int b){
         System.out.println("Your result is:"+ a+b);
         System.out.println("Your result is:"+ sin(a+b));

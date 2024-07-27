@@ -1,6 +1,8 @@
+package Collections;
+
 import java.util.ArrayList;
 
-public class Arraylist {
+public class Array_list {
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
         

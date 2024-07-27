@@ -1,6 +1,6 @@
 // package folder.folderl1.folderl2;
 
-class Calculator{
+class Calculator2{
     public void calculate(int a, int b){
         System.out.println("Your result is:"+ a+b);
     }
