@@ -7,17 +7,12 @@ public class NthNodeOperation {
     // head is first node in the list
     private Node head;
 
-    public class Node {
-        private int value;
+    public static class Node {
+        private final int value;
         private Node next;
 
         public Node(int value) {
             this.value = value;
-        }
-
-        public Node(int value, Node next) {
-            this.value = value;
-            this.next = next;
         }
     }
 
@@ -37,9 +32,9 @@ public class NthNodeOperation {
     }
 
     // deletion from last index
-    public Node removeNthFromEnd(Node head, int n) {
+    public void removeNthFromEnd(Node head, int n) {
         if (head.next == null) {
-            return null;
+            return;
         }
 
         // Counting size of list
@@ -51,7 +46,7 @@ public class NthNodeOperation {
         }
 
         if (n == size) {
-            return head.next;
+            return;
         }
 
         // finding one node before last node
@@ -64,7 +59,6 @@ public class NthNodeOperation {
             i++;
         }
         prevNode.next = prevNode.next.next;
-        return head;
     }
 
     public static void main(String[] args) {
