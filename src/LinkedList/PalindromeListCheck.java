@@ -11,11 +11,6 @@ public class PalindromeListCheck {
         public Node(int value) {
             this.value = value;
         }
-
-        public Node(int value, Node next) {
-            this.value = value;
-            this.next = next;
-        }
     }
     
     public void insertFirst(int val) {
@@ -33,7 +28,47 @@ public class PalindromeListCheck {
         System.out.println("END");
     }
 
-    public boolean isPalindrome(){
+    public Node reverse(Node head){
+        Node prevNode = null;
+        Node currNode = head;
+
+        while (currNode != null){
+            Node nextNode = currNode.next;
+            currNode.next = prevNode;
+            prevNode = currNode;
+            currNode = nextNode;
+        }
+        return prevNode;
+    }
+
+    private Node findMiddle(Node head) {
+        Node hare = head; // jumps two nodes
+        Node turtle = head; // jumps one node
+
+        while (hare.next != null && hare.next.next != null){
+            hare = hare.next.next;
+            turtle = turtle.next;
+        }
+        return turtle;
+    }
+
+    public boolean isPalindrome(Node head){
+        if(head == null || head.next == null){
+            return true;
+        }
+
+        // Divide the list into two parts and find the middle of the list and second half part will be reverse
+        Node middle = findMiddle(head); // 1st half's end
+        Node secondHalfStart = reverse(middle.next);
+
+        Node firstHalfStart = head;
+        while (secondHalfStart != null){
+            if(firstHalfStart.value != secondHalfStart.value){
+                return false;
+            }
+            firstHalfStart = firstHalfStart.next;
+            secondHalfStart = secondHalfStart.next;
+        }
         return true;
     }
     
@@ -49,6 +84,8 @@ public class PalindromeListCheck {
         list.insertFirst(1);
         list.display();
 
-        System.out.println("Checking the linked list is palindrome or not?");
+        System.out.println("Checking if the linked list is a palindrome:");
+        boolean result = list.isPalindrome(list.head);
+        System.out.println("Is palindrome? " + result);
     }
 }
