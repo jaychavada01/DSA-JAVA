@@ -1,3 +1,5 @@
+package Collections;
+
 /*
  * Set takes unique values.
  * Set inserts value in random order.
