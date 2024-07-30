@@ -81,19 +81,11 @@ public class Traversal {
     public static void main(String[] args) {
         int V = 7;
         /*
-<<<<<<< HEAD
          *   1 -- 3
          *  /     | \
          * 0      |  5 -- 6
          *  \     | /
          *   2 -- 4
-=======
-         * 1 -- 3
-         * / | \
-         * 0 | 5 -- 6
-         * \ | /
-         * 2 -- 4
->>>>>>> be1699487030467f97eba0b3a6b2e56864672665
          */
 
         @SuppressWarnings("unchecked")
