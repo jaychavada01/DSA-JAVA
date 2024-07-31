@@ -1,3 +1,4 @@
+package AvgProbs;
 import java.util.Scanner;
 
 public class Search_in_range {

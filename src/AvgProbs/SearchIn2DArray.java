@@ -1,3 +1,4 @@
+package AvgProbs;
 import java.util.Arrays;
 
 public class SearchIn2DArray {
