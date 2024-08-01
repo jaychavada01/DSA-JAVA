@@ -1,3 +1,4 @@
+package OldCodes;
 import java.util.Scanner;
 
 class myexception extends Exception{

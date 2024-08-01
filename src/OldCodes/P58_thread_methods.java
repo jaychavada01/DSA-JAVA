@@ -1,3 +1,4 @@
+package OldCodes;
 class threadnew1 extends Thread {
     public void run() {
         int i = 0;

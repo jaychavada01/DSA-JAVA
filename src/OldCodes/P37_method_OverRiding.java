@@ -1,3 +1,4 @@
+package OldCodes;
 class A{
 public int a;
     public int shadow(){

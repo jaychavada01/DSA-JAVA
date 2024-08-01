@@ -1,3 +1,4 @@
+package OldCodes;
 class NegativeRadiusException extends Exception {
     @Override
     public String toString() {

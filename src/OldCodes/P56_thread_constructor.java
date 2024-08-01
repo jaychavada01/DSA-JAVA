@@ -1,3 +1,4 @@
+package OldCodes;
 class thr extends Thread{
     // this constructor will give name to the thread
     public thr(String name){

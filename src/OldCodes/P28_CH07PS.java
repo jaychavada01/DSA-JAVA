@@ -1,3 +1,4 @@
+package OldCodes;
 public class P28_CH07PS {
     static void multiplication(int n) {
         for (int i = 1; i <= 10; i++) {

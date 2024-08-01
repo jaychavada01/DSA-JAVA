@@ -1,3 +1,4 @@
+package OldCodes;
 public class P17_loops {
     public static void main(String[] args) {
         System.out.println("Using of WHILE loop; ");

@@ -1,3 +1,4 @@
+package OldCodes;
 // we can use the static keyword with varibles and methods
 
 class MyClass {

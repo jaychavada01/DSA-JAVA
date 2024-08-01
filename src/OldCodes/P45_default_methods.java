@@ -1,3 +1,4 @@
+package OldCodes;
 interface camera {
     void takepic();
 

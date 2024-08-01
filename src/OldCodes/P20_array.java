@@ -1,3 +1,4 @@
+package OldCodes;
 public class P20_array {
     public static void main(String[] args) {
         // int [] marks = new int [5];

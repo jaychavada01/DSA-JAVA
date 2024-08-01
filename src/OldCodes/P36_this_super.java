@@ -1,3 +1,4 @@
+package OldCodes;
 class Ekclass{
     int a;
     public int getA() {

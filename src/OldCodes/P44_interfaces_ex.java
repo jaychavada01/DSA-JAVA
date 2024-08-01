@@ -1,3 +1,4 @@
+package OldCodes;
 interface Bicycle {
     // int a = 45;
     void applyBrake(int decrement);

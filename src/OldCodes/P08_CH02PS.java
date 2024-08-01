@@ -1,3 +1,4 @@
+package OldCodes;
 import java.util.Scanner;
 
 public class P08_CH02PS {

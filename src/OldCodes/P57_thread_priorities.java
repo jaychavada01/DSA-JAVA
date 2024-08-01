@@ -1,3 +1,4 @@
+package OldCodes;
 class thr1 extends Thread{
     public thr1(String name){
         super(name);

@@ -1,3 +1,4 @@
+package OldCodes;
 class Employee01 {
     int salary;
     String name;

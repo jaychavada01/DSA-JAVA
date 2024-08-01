@@ -1,3 +1,4 @@
+package OldCodes;
 import java.util.Scanner;
 
 public class P60_specific_exception {

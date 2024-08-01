@@ -1,3 +1,4 @@
+package OldCodes;
 public class P06_precedency {
     public static void main(String[] args) {
         int a = 64/8*6-10;

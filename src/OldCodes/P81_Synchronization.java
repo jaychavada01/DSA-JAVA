@@ -1,3 +1,4 @@
+package OldCodes;
 class Table{
     synchronized void PrinntTable(int n){
         for(int i=1; i<=5; i++){

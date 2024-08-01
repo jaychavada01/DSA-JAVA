@@ -1,3 +1,4 @@
+package OldCodes;
 class Outerclass {
     private int outervar = 20;
 

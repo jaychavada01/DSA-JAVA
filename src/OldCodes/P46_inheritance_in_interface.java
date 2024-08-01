@@ -1,3 +1,4 @@
+package OldCodes;
 interface parentSample{
     void meth1();
     void meth2();

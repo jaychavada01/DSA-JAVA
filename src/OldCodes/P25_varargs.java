@@ -1,3 +1,4 @@
+package OldCodes;
 public class P25_varargs {
     static int sum(int x, int... arr) {
         // available as int [] arr;

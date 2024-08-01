@@ -1,3 +1,4 @@
+package OldCodes;
 public class P10_strings_methods {
     public static void main(String[] args) {
         //.........STRINGS METHODS..........

@@ -1,3 +1,4 @@
+package OldCodes;
 class mythread1 extends Thread{
     @Override
     public void run(){

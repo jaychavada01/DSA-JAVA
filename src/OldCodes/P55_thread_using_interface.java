@@ -1,3 +1,4 @@
+package OldCodes;
 class runnablethread1 implements Runnable {
     public void run(){
         System.out.println("thread1 is running");

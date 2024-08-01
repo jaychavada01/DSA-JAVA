@@ -1,3 +1,4 @@
+package OldCodes;
 public class P22_CH06PS {
     public static void main(String[] args) {
         // que 01...

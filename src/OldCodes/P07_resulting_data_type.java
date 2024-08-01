@@ -1,3 +1,4 @@
+package OldCodes;
 public class P07_resulting_data_type {
     public static void main(String[] args) {
         /*

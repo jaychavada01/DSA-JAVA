@@ -1,3 +1,4 @@
+package OldCodes;
 public class P23_methods {
     // FUNCTION CALL
     static int logic(int x, int y) {

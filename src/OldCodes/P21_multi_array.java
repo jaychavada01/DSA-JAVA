@@ -1,3 +1,4 @@
+package OldCodes;
 public class P21_multi_array {
     public static void main(String[] args) {
         int[][] flats;

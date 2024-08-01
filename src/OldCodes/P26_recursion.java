@@ -1,3 +1,4 @@
+package OldCodes;
 class fact{
     int factorial(int n) {
         if (n == 0 || n == 1) {

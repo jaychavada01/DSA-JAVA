@@ -1,3 +1,4 @@
+package OldCodes;
 public class P59_try_catch_block {
     public static void main(String[] args) {
         int a = 6000;

@@ -1,3 +1,4 @@
+package OldCodes;
 class Phone {
     public void greetFromPhone() {
         System.out.println("Welcome to Nokia");

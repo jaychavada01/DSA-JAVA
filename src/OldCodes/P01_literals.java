@@ -1,3 +1,4 @@
+package OldCodes;
 public class P01_literals {
     public static void main(String[] args) {
         // THIS ALL ARE LITERALS.........
