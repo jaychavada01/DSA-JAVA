@@ -6,7 +6,7 @@ public class StringReverse {
         System.out.println("Reversed string with recursion: " + reversedStr);
         
         
-        // non-reversed
+        // non-recursive method
         String str1 = "jaychavada";
         String rev = "";
         char ch; 
