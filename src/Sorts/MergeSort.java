@@ -1,52 +1,69 @@
 package Sorts;
 
+import java.util.*;
+
 public class MergeSort {
 
-    public static void conquer(int arr[], int si, int mid, int ei) {
-        int merged[] = new int[ei - si + 1];
+    private static void merge(int[] arr, int low, int mid, int high) {
+        ArrayList<Integer> temp = new ArrayList<>(); // temporary array
+        int left = low; // starting index of left half of arr
+        int right = mid + 1; // starting index of right half of arr
 
-        int idx1 = si;
-        int idx2 = mid + 1;
-        int x = 0;
-
-        while (idx1 <= mid && idx2 <= ei) {
-            if (arr[idx1] <= arr[idx2]) {
-                merged[x++] = arr[idx1++];
+        // storing elements in the temporary array in a sorted manner
+        while (left <= mid && right <= high) {
+            if (arr[left] <= arr[right]) {
+                temp.add(arr[left]);
+                left++;
             } else {
-                merged[x++] = arr[idx2++];
+                temp.add(arr[right]);
+                right++;
             }
         }
-        while (idx1 <= mid) {
-            merged[x++] = arr[idx1++];
-        }
-        while (idx2 <= ei) {
-            merged[x++] = arr[idx2++];
+
+        // if elements on the left half are still left
+        while (left <= mid) {
+            temp.add(arr[left]);
+            left++;
         }
 
-        for (int i = 0, j = si; i < merged.length; i++, j++) {
-            arr[j] = merged[i];
+        // if elements on the right half are still left
+        while (right <= high) {
+            temp.add(arr[right]);
+            right++;
+        }
+
+        // transfering all elements from temporary to arr
+        for (int i = low; i <= high; i++) {
+            arr[i] = temp.get(i - low);
         }
     }
 
-    public static void divide(int arr[], int si, int ei) {
-        if (si >= ei) {
+    public static void mergeSort(int[] arr, int low, int high) {
+        if (low >= high)
             return;
-        }
-        int mid = si + (ei - si) / 2;
-        divide(arr, si, mid);
-        divide(arr, mid + 1, ei);
-        conquer(arr, si, mid, ei);
+        int mid = (low + high) / 2;
+        mergeSort(arr, low, mid); // left half
+        mergeSort(arr, mid + 1, high); // right half
+        merge(arr, low, mid, high); // merging sorted halves
     }
 
     public static void main(String[] args) {
-        int arr[] = { 6, 3, 5, 1, 8, 9, 7 };
-        int n = arr.length;
+        int n = 7;
+        int arr[] = { 9, 4, 7, 6, 3, 1, 5 };
 
-        divide(arr, 0, n-1);
-
+        System.out.println("Before sorting array: ");
         for (int i = 0; i < n; i++) {
-            System.out.print(arr[i]+" ");
+            System.out.print(arr[i] + " ");
         }
+
+        System.out.println();
+
+        mergeSort(arr, 0, n - 1);
+        System.out.println("After sorting array: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
         System.out.println();
     }
 }

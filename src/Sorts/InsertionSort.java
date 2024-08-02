@@ -2,34 +2,36 @@ package Sorts;
 
 public class InsertionSort {
 
-    static void printArray(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
+    static void insertion_sort(int[] arr, int n) {
+        for (int i = 0; i <= n - 1; i++) {
+            int j = i;
+            while (j > 0 && arr[j - 1] > arr[j]) {
+                int temp = arr[j - 1];
+                arr[j - 1] = arr[j];
+                arr[j] = temp;
+                j--;
+            }
+        }
+
+        System.out.println("After insertion sort: ");
+        for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
+    /*
+     * Takes an element and place it into it's correct position
+     */
 
     public static void main(String[] args) {
-        int[] arr = { 7, 8, 3, 1, 2 };
-
-        // dividing array into two parts one : sorted part and one is not
-
-        // 1st loop until for unsorted array
-
-        for (int i = 1; i < arr.length; i++) {
-            int current = arr[i];
-            // last index of sorted part
-            int j = i - 1;
-
-            while (j >= 0 && current < arr[j]) {
-                arr[j + 1] = arr[j];
-                j--;
-            }
-
-            // placement
-            arr[j + 1] = current;
+        int arr[] = { 13, 46, 24, 52, 20, 9 };
+        int n = arr.length;
+        System.out.println("Before Using insertion Sort: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
         }
-        printArray(arr);
+        System.out.println();
+        insertion_sort(arr, n);
     }
 }
 
