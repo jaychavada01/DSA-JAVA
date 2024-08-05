@@ -12,71 +12,71 @@ public class Patterns {
         System.out.println("Pattern 1:");
         pattern1(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 2:");
         pattern2(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 3:");
         pattern3(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 4:");
         pattern4(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 5:");
         pattern5(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 5a:");
         pattern5a(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 6:");
         pattern6(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 7:");
         pattern7(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 8:");
         pattern8(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 9:");
         pattern9(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 10:");
         pattern10(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 11:");
         pattern11(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 12:");
         pattern12(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 13:");
         pattern13(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 14:");
         pattern14(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 15:");
         pattern15(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 16:");
         pattern16(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 17:");
         pattern17(n);
         System.out.print("\n");
@@ -439,6 +439,18 @@ public class Patterns {
         }
     }
 
+    static void pattern21a(int n) {
+        for (int i = n; i >= 1; i--) {
+            for (int space = 0; space < n - i; space++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
     static void pattern22(int n) {
         for (int i = 0; i < n; i++) {
             for (int space = 0; space < n - i - 1; space++) {
@@ -649,12 +661,12 @@ public class Patterns {
         }
     }
 
-    static void pattern34(int n){
+    static void pattern34(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if(i == 0 || j == 0 || i == n-1 || j == n-1) {
+                if (i == 0 || j == 0 || i == n - 1 || j == n - 1) {
                     System.out.print("*");
-                }else{
+                } else {
                     System.out.print(" ");
                 }
             }
