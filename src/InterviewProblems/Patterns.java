@@ -152,9 +152,13 @@ public class Patterns {
         System.out.println("Pattern 35:");
         pattern35(n);
         System.out.print("\n");
-        
+
         System.out.println("Pattern 36:");
         pattern36(n);
+        System.out.print("\n");
+
+        System.out.println("Pattern 37:");
+        pattern37(n);
         System.out.print("\n");
     }
 
@@ -497,9 +501,9 @@ public class Patterns {
     static void pattern24(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j <= i; j++) {
-                if((i+j) % 2 == 0){
+                if ((i + j) % 2 == 0) {
                     System.out.print(1 + " ");
-                }else{
+                } else {
                     System.out.print(0 + " ");
                 }
             }
@@ -685,10 +689,9 @@ public class Patterns {
                 System.out.print(" ");
             }
             for (int j = 1; j <= 2 * i - 1; j++) {
-                if(j == 1 || j == 2 * i - 1 || i==n){
+                if (j == 1 || j == 2 * i - 1 || i == n) {
                     System.out.print("*");
-                }
-                else{
+                } else {
                     System.out.print(" ");
                 }
             }
@@ -696,14 +699,31 @@ public class Patterns {
         }
     }
 
-    static void pattern36(int n){
-        int count= 1;
+    static void pattern36(int n) {
+        int count = 1;
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
-                if(count < 10)
+                if (count < 10)
                     System.out.print(0);
-                System.out.print(count+ " ");
+                System.out.print(count + " ");
                 count++;
+            }
+            System.out.println();
+        }
+    }
+
+    static void pattern37(int n) {
+        int num = 1;
+        for (int i = 1; i <= n; i++) {
+            for (int space = n; space >= i; space--) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                if(num < 10){
+                    System.out.print(0);
+                }
+                System.out.print(num + " ");
+                num = num + 1;
             }
             System.out.println();
         }

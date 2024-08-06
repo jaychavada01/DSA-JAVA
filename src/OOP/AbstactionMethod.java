@@ -24,5 +24,8 @@ public class AbstactionMethod {
     public static void main(String[] args) {
         Bmw b1 = new Bmw();
         b1.Brand();
+
+        Mercedes b = new Mercedes();
+        b.Brand();
     }
 }

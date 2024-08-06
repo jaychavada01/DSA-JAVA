@@ -3,58 +3,36 @@ package OOP;
 // overloading - compile time polymorphism
 // overriding - runtime polymorphism
 
-// Class to demonstrate method overloading
-class Animal {
-    // Overloaded methods
-    void makeSound() {
-        System.out.println("Some generic animal sound");
+class Car{
+    public void Speed(){
+        System.out.println("Speed constructor called...");
     }
 
-    void makeSound(String sound) {
-        System.out.println(sound);
+    public void Type(){
+        System.out.println("Type constructor called...");
     }
 }
 
-// Class to demonstrate method overriding
-class Dog extends Animal {
-    // Overriding the makeSound method
+class Tata extends Car{
     @Override
-    void makeSound() {
-        System.out.println("Bark");
+    public void Speed(){
+        System.out.println("Speed of tata motor...");
     }
 
-    // Overloaded methods in the subclass
-    void makeSound(int times) {
-        for (int i = 0; i < times; i++) {
-            System.out.println("Bark");
-        }
-    }
-
-    void makeSound(String sound, int times) {
-        for (int i = 0; i < times; i++) {
-            System.out.println(sound);
-        }
+    // overloading
+    public void Type(String cartype){
+        System.out.println("Car type is: " + cartype);
     }
 }
 
 public class Polymorphism {
     public static void main(String[] args) {
-        Animal myAnimal = new Animal();
-        Dog myDog = new Dog();
+        Tata t = new Tata();
+        t.Speed();
+        t.Type();
 
-        // Calling overloaded methods in Animal class
-        myAnimal.makeSound();
-        myAnimal.makeSound("Roar");
-
-        // Calling overridden method in Dog class
-        myDog.makeSound();
-
-        // Calling overloaded methods in Dog class
-        myDog.makeSound(3);
-        myDog.makeSound("Woof", 2);
-
-        // Demonstrating polymorphism
-        Animal polyAnimal = new Dog();
-        polyAnimal.makeSound(); // This will call the overridden method in Dog class
+        Tata t2 = new Tata();
+        t2.Speed();
+        t2.Type("4 Seater car");
     }
 }
