@@ -148,6 +148,14 @@ public class Patterns {
         System.out.println("Pattern 34:");
         pattern34(n);
         System.out.print("\n");
+
+        System.out.println("Pattern 35:");
+        pattern35(n);
+        System.out.print("\n");
+        
+        System.out.println("Pattern 36:");
+        pattern36(n);
+        System.out.print("\n");
     }
 
     static void pattern1(int n) {
@@ -280,15 +288,15 @@ public class Patterns {
 
     // pyramid pattern
     static void pattern10(int n) {
-        for (int row = 1; row <= n; row++) {
-            for (int s = 0; s < n - row; s++) {
+        for (int i = 1; i <= n; i++) {
+            for (int s = 0; s < n - i; s++) {
                 System.out.print("  ");
             }
-            for (int col = row; col >= 1; col--) {
-                System.out.print(col + " ");
+            for (int s = i; s >= 1; s--) {
+                System.out.print(s + " ");
             }
-            for (int col = 2; col <= row; col++) {
-                System.out.print(col + " ");
+            for (int j = 2; j <= i; j++) {
+                System.out.print(j + " ");
             }
             System.out.println();
         }
@@ -488,15 +496,12 @@ public class Patterns {
 
     static void pattern24(int n) {
         for (int i = 0; i < n; i++) {
-            int start = 1;
-            if (i % 2 == 0) {
-                start = 1;
-            } else {
-                start = 0;
-            }
             for (int j = 0; j <= i; j++) {
-                System.out.print(start + " ");
-                start = 1 - start;
+                if((i+j) % 2 == 0){
+                    System.out.print(1 + " ");
+                }else{
+                    System.out.print(0 + " ");
+                }
             }
             System.out.println();
         }
@@ -669,6 +674,36 @@ public class Patterns {
                 } else {
                     System.out.print(" ");
                 }
+            }
+            System.out.println();
+        }
+    }
+
+    static void pattern35(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int space = i; space <= n; space++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                if(j == 1 || j == 2 * i - 1 || i==n){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    static void pattern36(int n){
+        int count= 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if(count < 10)
+                    System.out.print(0);
+                System.out.print(count+ " ");
+                count++;
             }
             System.out.println();
         }
